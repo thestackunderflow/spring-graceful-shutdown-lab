@@ -1,0 +1,6 @@
+# The same kind of start script, but `exec java`: java replaces the shell and becomes PID 1.
+FROM eclipse-temurin:21-jre
+COPY target/app.jar /app.jar
+COPY docker/start-exec.sh /start-exec.sh
+RUN chmod +x /start-exec.sh
+ENTRYPOINT ["/start-exec.sh"]

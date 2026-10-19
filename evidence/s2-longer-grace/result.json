@@ -2,16 +2,223 @@
   "scenario": "s2-longer-grace",
   "stop_command": "docker stop -t 40 sgs-app",
   "exit_code": 143,
-  "stop_seconds": 18.88,
+  "stop_seconds": 18.23,
   "pid1": "java -jar /app.jar",
   "client": {
     "body": "done after 20 s",
     "curl_exit": 0,
-    "time_total": 20.032393
+    "time_total": 20.016003
   },
-  "newcomer": {
-    "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server",
-    "curl_exit": 7,
-    "time_total": 0.000484
-  }
+  "stop_started_utc_host": "14:27:53.490",
+  "request_started_utc": "14:27:51.452",
+  "commencing_utc": "14:27:53.585",
+  "complete_utc": "14:28:11.524",
+  "sigterm_after_request_s": 2.13,
+  "newcomer_polls": [
+    {
+      "utc": "14:27:51",
+      "curl_exit": 0,
+      "body": "Hello"
+    },
+    {
+      "utc": "14:27:51",
+      "curl_exit": 0,
+      "body": "Hello"
+    },
+    {
+      "utc": "14:27:52",
+      "curl_exit": 0,
+      "body": "Hello"
+    },
+    {
+      "utc": "14:27:52",
+      "curl_exit": 0,
+      "body": "Hello"
+    },
+    {
+      "utc": "14:27:53",
+      "curl_exit": 0,
+      "body": "Hello"
+    },
+    {
+      "utc": "14:27:53",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:54",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:54",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:55",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 1 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:55",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:56",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:56",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:57",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:57",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:58",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:58",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:59",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:27:59",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:00",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:00",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:01",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:01",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:02",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 1 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:02",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:03",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:03",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:04",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:04",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:05",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:05",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:06",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:06",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:07",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:07",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:08",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:08",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:09",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:09",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:10",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:10",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    },
+    {
+      "utc": "14:28:11",
+      "curl_exit": 7,
+      "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server"
+    }
+  ]
 }

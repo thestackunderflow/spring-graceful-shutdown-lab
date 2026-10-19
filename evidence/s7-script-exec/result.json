@@ -1,0 +1,17 @@
+{
+  "scenario": "s7-script-exec",
+  "stop_command": "docker stop -t 40 sgs-app",
+  "exit_code": 143,
+  "stop_seconds": 18.2,
+  "pid1": "java -jar /app.jar",
+  "client": {
+    "body": "done after 20 s",
+    "curl_exit": 0,
+    "time_total": 20.01663
+  },
+  "stop_started_utc_host": "14:28:21.281",
+  "request_started_utc": "14:28:19.246",
+  "commencing_utc": "14:28:21.382",
+  "complete_utc": "14:28:39.270",
+  "sigterm_after_request_s": 2.14
+}

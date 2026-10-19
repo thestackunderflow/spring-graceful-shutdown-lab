@@ -22,8 +22,9 @@ container's exit code, and the app's log. Results land in `evidence/<scenario>/`
 | `s4-immediate` | exec-form | `docker stop -t 40` | `server.shutdown=immediate` |
 | `s5-script-no-exec` | start script that runs `java` without `exec` | `docker stop` | defaults |
 | `s6-shell-form` | shell-form ENTRYPOINT | `docker stop` | defaults |
+| `s7-script-exec` | start script that ends with `exec java` | `docker stop -t 40` | defaults |
 
-In s2 a second, new request is sent 2 s after the stop starts, to see what a newcomer gets during shutdown.
+In s2 a poller container, started before the stop, sends a new request every 0.5 s and logs the time of each, to see what newcomers get during shutdown.
 
 ## Tests
 - `tests/test_evidence.py` asserts what each scenario's evidence must show (written before the runs).

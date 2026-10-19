@@ -41,10 +41,20 @@ class LongerGrace(unittest.TestCase):
         self.assertEqual(r['exit_code'], 143)                      # 128 + 15: ended by SIGTERM, not killed
         self.assertLess(r['stop_seconds'], 40)
 
-    def test_a_new_request_during_shutdown_is_not_served(self):
+    def test_new_requests_are_refused_once_shutdown_begins(self):
+        # A poller container, started before docker stop, sends a new request every 0.5 s and logs the time of each.
         r = load('s2-longer-grace')
-        self.assertNotEqual(r['newcomer']['curl_exit'], 0)
-        self.assertNotIn('Hello', r['newcomer']['body'])
+        polls = r['newcomer_polls']
+        commencing = r['commencing_utc']                     # HH:MM:SS from app.log
+        before = [x for x in polls if x['utc'] < commencing[:8]]
+        after = [x for x in polls if x['utc'] > commencing[:8] and x['utc'] <= r['complete_utc'][:8]]
+        self.assertTrue(any(x['curl_exit'] == 0 and x['body'] == 'Hello' for x in before), 'served before the stop')
+        self.assertTrue(after, 'polls ran during the graceful shutdown')
+        self.assertTrue(all(x['curl_exit'] == 7 for x in after), 'every new request during shutdown was refused')
+
+    def test_docker_stop_reached_java_promptly(self):
+        r = load('s2-longer-grace')
+        self.assertLess(r['sigterm_after_request_s'], 4)      # stop sent ~2 s into the request (s1: 2.1 s)
 
 
 class ShortPhase(unittest.TestCase):
@@ -84,6 +94,16 @@ class ShellForm(unittest.TestCase):
         graceful = 'Commencing graceful shutdown' in r['log']
         self.assertEqual(graceful, r['pid1'].split()[0] == 'java')  # graceful exactly when java itself is PID 1
         self.assertIn(r['exit_code'], (137, 143))
+
+
+class ScriptWithExec(unittest.TestCase):
+    """s7: the same start script, but `exec java`: java replaces the shell as PID 1 and shuts down gracefully."""
+    def test_exec_makes_java_pid1(self):
+        r = load('s7-script-exec')
+        self.assertEqual(r['pid1'].split()[0], 'java')
+        self.assertIn('Graceful shutdown complete', r['log'])
+        self.assertEqual(r['exit_code'], 143)
+        self.assertIn('done after 20 s', r['client']['body'])
 
 
 if __name__ == '__main__':
