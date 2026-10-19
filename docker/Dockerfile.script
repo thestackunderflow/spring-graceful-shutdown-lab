@@ -1,0 +1,6 @@
+# A start script that runs java without exec: the shell stays PID 1 (a common real-world pattern).
+FROM eclipse-temurin:21-jre
+COPY target/app.jar /app.jar
+COPY docker/start.sh /start.sh
+RUN chmod +x /start.sh
+ENTRYPOINT ["/start.sh"]

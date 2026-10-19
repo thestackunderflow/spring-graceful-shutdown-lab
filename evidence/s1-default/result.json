@@ -1,0 +1,12 @@
+{
+  "scenario": "s1-default",
+  "stop_command": "docker stop sgs-app",
+  "exit_code": 137,
+  "stop_seconds": 10.42,
+  "pid1": "java -jar /app.jar",
+  "client": {
+    "body": "curl: (52) Empty reply from server",
+    "curl_exit": 52,
+    "time_total": 12.159744
+  }
+}

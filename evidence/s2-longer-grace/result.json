@@ -1,0 +1,17 @@
+{
+  "scenario": "s2-longer-grace",
+  "stop_command": "docker stop -t 40 sgs-app",
+  "exit_code": 143,
+  "stop_seconds": 18.88,
+  "pid1": "java -jar /app.jar",
+  "client": {
+    "body": "done after 20 s",
+    "curl_exit": 0,
+    "time_total": 20.032393
+  },
+  "newcomer": {
+    "body": "curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server",
+    "curl_exit": 7,
+    "time_total": 0.000484
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "scenario": "s3-short-phase",
+  "stop_command": "docker stop -t 40 sgs-app",
+  "exit_code": 143,
+  "stop_seconds": 7.26,
+  "pid1": "java -jar /app.jar",
+  "client": {
+    "body": "curl: (52) Empty reply from server",
+    "curl_exit": 52,
+    "time_total": 7.877841
+  }
+}

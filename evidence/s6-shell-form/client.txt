@@ -1,0 +1,4 @@
+curl: (52) Empty reply from server
+
+time_total=12.177202
+curl_exit=52

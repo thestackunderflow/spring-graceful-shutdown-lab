@@ -1,0 +1,2 @@
+spring-boot-web-server-4.1.1.jar spring-configuration-metadata.json server.shutdown default= graceful
+spring-boot-autoconfigure-4.1.1.jar spring-configuration-metadata.json spring.lifecycle.timeout-per-shutdown-phase default= 30s

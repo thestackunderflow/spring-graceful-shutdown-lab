@@ -1,0 +1,12 @@
+{
+  "scenario": "s6-shell-form",
+  "stop_command": "docker stop sgs-app",
+  "exit_code": 137,
+  "stop_seconds": 10.32,
+  "pid1": "/bin/sh -c java -jar /app.jar",
+  "client": {
+    "body": "curl: (52) Empty reply from server",
+    "curl_exit": 52,
+    "time_total": 12.177202
+  }
+}

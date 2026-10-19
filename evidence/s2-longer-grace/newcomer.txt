@@ -1,0 +1,4 @@
+curl: (7) Failed to connect to sgs-app port 8080 after 0 ms: Could not connect to server
+
+time_total=0.000484
+curl_exit=7
