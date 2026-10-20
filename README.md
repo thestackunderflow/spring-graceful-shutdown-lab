@@ -1,7 +1,7 @@
 # Spring Boot graceful shutdown under `docker stop` (lab)
 
 What happens to a request that is still running when a Spring Boot container is stopped? This lab measures it, with
-real logs, for the video "Spring Boot Graceful Shutdown: What docker stop Does to Live Requests" (The Stack Underflow).
+real logs, for the video "Spring Boot Graceful Shutdown: What docker stop Does to Live Requests" (The Stack Underflow): https://youtu.be/i7oC54MVoUU.
 
 Everything runs in Docker. Spring Boot 4.1.1, Java 21.
 
